@@ -38,8 +38,6 @@ const inputsValidation = () => {
 formElem.addEventListener("submit", event => {
   event.preventDefault();
 
-  console.log(inputsValidation());
-
   //VALIDATION PRINT
   if (inputsValidation()) {
     messageElem.innerText = inputsValidation().join(", ");
@@ -55,11 +53,22 @@ formElem.addEventListener("submit", event => {
   console.log(memberObject);
 
   //CLEAN INPUTS FIELDS
-  nameInput.value = "";
-  employersRadios.forEach(employer => (employer.checked = false));
-  eployerOther.value = "";
+  //   nameInput.value = "";
+  //   employersRadios.forEach(employer => (employer.checked = false));
+  //   eployerOther.value = "";
 
   let xhr = new XMLHttpRequest();
+  xhr.open("POST", "/");
+  xhr.setRequestHeader("content-type", "application/json");
+  xhr.onload = function () {
+    console.log("odpowiedź z servera", xhr.responseText);
+    if (xhr.responseText == "success") {
+      alert("wysłany");
+    } else {
+      alert("błąd");
+    }
+  };
+  xhr.send(JSON.stringify(memberObject));
 
   //POST MEMBER
   // fetch(URL_POST_MEMBER, {

@@ -1,191 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel =  "stylesheet" href="css/styles.css">
-    <script type="module" src='index.js'></script>
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body class="flex justify-center p-8">
-
-
-<form>
-
-    <div class="form-group">
+  <body class="flex justify-center p-8">
+    <form>
+      <div class="form-group">
         <label for="name">imię</label>
-        <input type="text" name="name" id="name"
-               class="border border-gray-300 p-0.5">
-    </div>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <label for="surname">nazwisko</label>
-        <input type="text" name="surname" id="surname"
-               class="border border-gray-300 p-0.5">
-    </div>
+        <input
+          type="text"
+          name="surname"
+          id="surname"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <label for="adress">adres</label>
-        <input type="text" name="adress" id="adress"
-               class="border border-gray-300 p-0.5">
-    </div>
+        <input
+          type="text"
+          name="adress"
+          id="adress"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <label for="phone">nr telefonu</label>
-        <input type="text" name="phone" id="phone"
-               class="border border-gray-300 p-0.5">
-    </div>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <label for="email">email</label>
-        <input type="text" name="email" id="email"
-               class="border border-gray-300 p-0.5">
-    </div>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <!-- PRACODAWCA -->
+      <!-- PRACODAWCA -->
 
-    <h2 class="font-bold my-2">pracodawca</h2>
+      <h2 class="font-bold my-2">pracodawca</h2>
 
-    <div class="inputRadio">
-        <label> amazon</label>
-        <input type="radio" name="employer" value="amazon">
-    </div>
+      <div class="inputRadio">
+        <label>amazon</label>
+        <input type="radio" name="employer" value="amazon" />
+      </div>
 
-    <div class="inputRadio">
-        <label> adecco </label>
-        <input type="radio" name="employer" value="adecco">
-    </div>
+      <div class="inputRadio">
+        <label>adecco</label>
+        <input type="radio" name="employer" value="adecco" />
+      </div>
 
-    <div class="inputRadio">
-        <label> randstad </label>
-        <input type="radio" name="employer" value="randstad">
-    </div>
+      <div class="inputRadio">
+        <label>randstad</label>
+        <input type="radio" name="employer" value="randstad" />
+      </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <label for="eployerOther">pracodawca inny</label>
-        <input type="text" name="eployerOther" id="eployerOther"
-               class="border border-gray-300 p-0.5">
-    </div>
+        <input
+          type="text"
+          name="eployerOther"
+          id="eployerOther"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <!--  MIEJSCE PRACY  -->
+      <!--  MIEJSCE PRACY  -->
 
-    <h2 class="font-bold my-2">miejsce pracy </h2>
+      <h2 class="font-bold my-2">miejsce pracy</h2>
 
-    <div class="inputRadio">
-        <label> poz1 </label>
-        <input type="radio" name="workplace" value="poz1">
-    </div>
-    <div class="inputRadio">
-        <label> wro1 </label>
-        <input type="radio" name="workplace" value="wro1">
-    </div>
-    <div class="inputRadio">
-        <label> wro2 </label>
-        <input type="radio" name="workplace" value="wro2">
-    </div>
-    <div class="inputRadio">
-        <label> wro5 </label>
-        <input type="radio" name="workplace" value="wro5">
-    </div>
-    <div class="inputRadio">
-        <label> lcj </label>
-        <input type="radio" name="workplace" value="lcj">
-    </div>
-    <div class="inputRadio">
-        <label> ktw1 </label>
-        <input type="radio" name="workplace" value="ktw1">
-    </div>
-    <div class="inputRadio">
-        <label> ktw3 </label>
-        <input type="radio" name="workplace" value="ktw3">
-    </div>
-    <div class="inputRadio">
-        <label> szzl </label>
-        <input type="radio" name="workplace" value="szzl">
-    </div>
-    <div class="form-group">
-        <label for="workplaceOther">miejsce pracy inne </label>
-        <input type="text" name="workplaceOther" id="workplaceOther"
-               class="border border-gray-300 p-0.5">
-    </div>
+      <div class="inputRadio">
+        <label>poz1</label>
+        <input type="radio" name="workplace" value="poz1" />
+      </div>
+      <div class="inputRadio">
+        <label>wro1</label>
+        <input type="radio" name="workplace" value="wro1" />
+      </div>
+      <div class="inputRadio">
+        <label>wro2</label>
+        <input type="radio" name="workplace" value="wro2" />
+      </div>
+      <div class="inputRadio">
+        <label>wro5</label>
+        <input type="radio" name="workplace" value="wro5" />
+      </div>
+      <div class="inputRadio">
+        <label>lcj</label>
+        <input type="radio" name="workplace" value="lcj" />
+      </div>
+      <div class="inputRadio">
+        <label>ktw1</label>
+        <input type="radio" name="workplace" value="ktw1" />
+      </div>
+      <div class="inputRadio">
+        <label>ktw3</label>
+        <input type="radio" name="workplace" value="ktw3" />
+      </div>
+      <div class="inputRadio">
+        <label>szzl</label>
+        <input type="radio" name="workplace" value="szzl" />
+      </div>
+      <div class="form-group">
+        <label for="workplaceOther">miejsce pracy inne</label>
+        <input
+          type="text"
+          name="workplaceOther"
+          id="workplaceOther"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <!-- UMOWA   -->
+      <!-- UMOWA   -->
 
-    <h2 class="font-bold my-2">umowa</h2>
+      <h2 class="font-bold my-2">umowa</h2>
 
-    <div class="inputRadio">
-        <label> umowa na czas nieokreślony </label>
-        <input type="radio" name="contract" value="umowa czas nieokreślony">
-    </div>
-    <div class="inputRadio">
-        <label> umowa na czas określony </label>
-        <input type="radio" name="contract" value="umowa czas określony">
-    </div>
-    <div class="inputRadio">
-        <label> okres próbny </label>
-        <input type="radio" name="contract" value="okres próbny">
-    </div>
-    <div class="inputRadio">
-        <label> umowa zlecenie </label>
-        <input type="radio" name="contract" value="umowa zlecenie">
-    </div>
+      <div class="inputRadio">
+        <label>umowa na czas nieokreślony</label>
+        <input type="radio" name="contract" value="umowa czas nieokreślony" />
+      </div>
+      <div class="inputRadio">
+        <label>umowa na czas określony</label>
+        <input type="radio" name="contract" value="umowa czas określony" />
+      </div>
+      <div class="inputRadio">
+        <label>okres próbny</label>
+        <input type="radio" name="contract" value="okres próbny" />
+      </div>
+      <div class="inputRadio">
+        <label>umowa zlecenie</label>
+        <input type="radio" name="contract" value="umowa zlecenie" />
+      </div>
 
-    <!--WYMIAR CZASU PRACY-->
+      <!--WYMIAR CZASU PRACY-->
 
-    <h2 class="font-bold my-2"> wymiar czasu pracy</h2>
-    <div class="inputRadio">
-        <label> cały etat </label>
-        <input type="radio" name="workTime" value="cały etat">
-    </div>
-    <div class="inputRadio">
-        <label> cały etat </label>
-        <input type="radio" name="workTime" value="pół etatu">
-    </div>
+      <h2 class="font-bold my-2">wymiar czasu pracy</h2>
+      <div class="inputRadio">
+        <label>cały etat</label>
+        <input type="radio" name="workTime" value="cały etat" />
+      </div>
+      <div class="inputRadio">
+        <label>cały etat</label>
+        <input type="radio" name="workTime" value="pół etatu" />
+      </div>
 
-    <!--    DZIAŁ, LOGIN -->
+      <!--    DZIAŁ, LOGIN -->
 
-    <h2 class="font-bold my-2"> dział, login </h2>
+      <h2 class="font-bold my-2">dział, login</h2>
 
-    <div class="form-group">
-        <label for="department">dział </label>
-        <input type="text" name="department" id="department"
-               class="border border-gray-300 p-0.5">
-    </div>
+      <div class="form-group">
+        <label for="department">dział</label>
+        <input
+          type="text"
+          name="department"
+          id="department"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <div class="form-group">
-        <label for="login">login </label>
-        <input type="text" name="login" id="login"
-               class="border border-gray-300 p-0.5">
-    </div>
+      <div class="form-group">
+        <label for="login">login</label>
+        <input
+          type="text"
+          name="login"
+          id="login"
+          class="border border-gray-300 p-0.5"
+        />
+      </div>
 
-    <!--PRZYNALEŻNOŚĆ-->
+      <!--PRZYNALEŻNOŚĆ-->
 
-    <div class="inputRadio">
-        <label> nie należę </label>
-        <input type="radio" name="union" value="nie należę">
-    </div>
-    <div class="inputRadio">
-        <label> należę </label>
-        <input type="radio" name="union" value="należę">
-    </div>
-    <div class="inputRadio">
-        <label> należę nie chcę</label>
-        <input type="radio" name="union" value="należę nie chcę">
-    </div>
+      <div class="inputRadio">
+        <label>nie należę</label>
+        <input type="radio" name="union" value="nie należę" />
+      </div>
+      <div class="inputRadio">
+        <label>należę</label>
+        <input type="radio" name="union" value="należę" />
+      </div>
+      <div class="inputRadio">
+        <label>należę nie chcę</label>
+        <input type="radio" name="union" value="należę nie chcę" />
+      </div>
 
-    <!-- ZATWIERDŹ-->
+      <!-- ZATWIERDŹ-->
 
-    <button type="submit"
-            class="text-white p-1 bg-black my-2">
-        zatwierdź</button>
+      <button type="submit" class="text-white p-1 bg-black my-2">
+        zatwierdź
+      </button>
 
-    <div class="info-container">
-        <div id="message" class="text-red-400" ></div>
-    </div>
-</form>
-<script src = "js/app.js"></script>
-</body>
+      <div class="info-container">
+        <div id="message" class="text-red-400"></div>
+      </div>
+    </form>
+    <script src="js/app.js"></script>
+  </body>
 </html>
