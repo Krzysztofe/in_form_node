@@ -26,16 +26,22 @@ app.post("/", (req, res) => {
   // },
 
   const transporter = nodeMailer.createTransport({
-    host: "wp.pl",
+    host: "poczta.interia.pl",
     port: 587,
+    secure: false,
     auth: {
-      user: "wacpanno@wp.pl",
-      pass: "Dupadupadupa666",
+      user: "wolfbrigade36@interia.pl",
+      pass: "25czerwca25czerwca",
+    },
+
+    //to niby potrzebne gdy sie wysyla z localost
+    tls: {
+      rejectUnauthorized: false,
     },
   });
   const mailOptions = {
-    from: req.body.name,
-    to: "wacpanno@wp.pl",
+    from: "wolfbrigade36@interia.pl",
+    to: "wolfbrigade36@interia.pl",
     subject: `Message from ${req.body.name}: ${req.body.surname}`,
     text: req.body.surname,
   };
