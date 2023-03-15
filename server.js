@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const nodeMailer = require("nodemailer");
-
+     
 const PORT = process.env.PORT || 5000;
 
 // Middleware
@@ -13,37 +13,52 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  console.log("body", req.body);
-
-  //   const transporter = nodeMailer.createTransport({
-  //     service: "Gmail",
-  //     auth: {
-  //       user: "wolfbrigade36@gmail.com",
-  //       pass: "25czerwca",
-  //     },
-  // tls: {
-  //   rejectUnauthorized: false,
-  // },
+  console.log("body", req.body); 
 
   const transporter = nodeMailer.createTransport({
-    host: "poczta.interia.pl",
-    port: 587,
-    secure: false,
+    host: "smtp.ethereal.email",
+    port: "587",
     auth: {
-      user: "wolfbrigade36@interia.pl",
-      pass: "25czerwca25czerwca",
+      user: "kamille87@ethereal.email",
+      pass: "yz7frFTFJbayQQsBrr",
     },
-
-    //to niby potrzebne gdy sie wysyla z localost
     tls: {
       rejectUnauthorized: false,
     },
   });
+
+  // const transporter = nodeMailer.createTransport({
+  //   host: "smtp.ethereal.email",
+  //   port: 587,
+  //   auth: {
+  //     user: "melyna53@ethereal.email",
+  //     pass: "FDZQEY5RUdvzneAzcY",
+  //   },
+
+  //   // to niby potrzebne gdy sie wysyla z localost
+  //   tls: {
+  //     rejectUnauthorized: false,
+  //   },
+  // });
   const mailOptions = {
-    from: "wolfbrigade36@interia.pl",
-    to: "wolfbrigade36@interia.pl",
-    subject: `Message from ${req.body.name}: ${req.body.surname}`,
-    text: req.body.surname,
+    from: "deklaracja",
+    to: "kamille87@ethereal.email",
+    subject: `DEKLARACJA`,
+    text: `Imie: ${req.body.name},
+    Nazwisko: ${req.body.surname},
+    Adres:${req.body.adress},
+    Nr telefonu: ${req.body.phone},
+    Email:${req.body.email},
+    Pracodawca: ${req.body.employer}, 
+    Pracodawca inny:${req.body.employerOther}, 
+    Miejsce pracy: ${req.body.workplace},
+    Miejsce pracy inny:${req.body.workplaceOther},
+   Umowa: ${req.body.contract}, 
+   Wymiar czasu pracy: ${req.body.workTime}, 
+   Dział: ${req.body.department}, 
+   Login ${req.body.login}, 
+   Uzwiązkowienie: ${req.body.union}, 
+    `,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
